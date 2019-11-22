@@ -18,15 +18,15 @@ import java.sql.Time;
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(discriminatorType=DiscriminatorType.STRING, name="TYPE")
 public class Event {
-private Set<Perfromer> perfromer;
+private Set<Performer> performer;
    
    @ManyToMany
-   public Set<Perfromer> getPerfromer() {
-      return this.perfromer;
+   public Set<Performer> getPerformer() {
+      return this.performer;
    }
    
-   public void setPerfromer(Set<Perfromer> perfromers) {
-      this.perfromer = perfromers;
+   public void setPerformer(Set<Performer> performers) {
+      this.performer = performers;
    }
    
     private String name;

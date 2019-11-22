@@ -5,10 +5,10 @@ import java.util.Set;
 import javax.persistence.ManyToMany;
 
 @Entity
-public class Perfromer extends PersonRole{
+public class Performer extends PersonRole{
    private Set<Event> event;
    
-   @ManyToMany(mappedBy="perfromer" )
+   @ManyToMany(mappedBy="performer" )
    public Set<Event> getEvent() {
       return this.event;
    }

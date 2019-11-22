@@ -34,4 +34,15 @@ public int getAmount() {
       this.participant = participant;
    }
    
+   private Registration registration;
+   
+   @OneToOne(mappedBy="googlePay" , optional=false)
+   public Registration getRegistration() {
+      return this.registration;
+   }
+   
+   public void setRegistration(Registration registration) {
+      this.registration = registration;
+   }
+   
    }

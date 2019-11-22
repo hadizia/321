@@ -1,4 +1,5 @@
 package ca.mcgill.ecse321.eventregistration.model;
+import javax.persistence.OneToOne;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -6,6 +7,17 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Registration {
+private GooglePay googlePay;
+   
+   @OneToOne(optional=false)
+   public GooglePay getGooglePay() {
+      return this.googlePay;
+   }
+   
+   public void setGooglePay(GooglePay googlePay) {
+      this.googlePay = googlePay;
+   }
+   
 
 	private int id;
 
